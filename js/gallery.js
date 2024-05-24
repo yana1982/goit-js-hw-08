@@ -98,7 +98,7 @@ gallery.addEventListener('click', e => {
   console.log(source);
   const liElem = e.target.closest('.gallery-item');
   if (!liElem) return;
-  const overview = e.target.closest('.gallery-link').querySelector('img').alt;
+  const overview = liElem.querySelector('img').alt;
   
   const instance = basicLightbox.create(`
     <img src="${source}" alt="${overview}" />
